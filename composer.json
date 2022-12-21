@@ -1,11 +1,17 @@
 {
     "name": "moh-slimani/nova-tiny-m-c-e",
-    "description": "A Laravel Nova field.",
+    "description": "A Laravel Nova field that uses Tiny MCE.",
     "keywords": [
         "laravel",
         "nova"
     ],
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohamed Slimani",
+            "email": "mohamed@slimani.dev"
+        }
+    ],
     "require": {
         "php": "^7.3|^8.0"
     },
