@@ -5,6 +5,7 @@
                 <template v-if="showContent">Hide Content</template>
                 <template v-else>Show Content</template>
             </button>
+
             <div v-if="showContent" class="editor-js" v-html="field.value"></div>
         </template>
     </PanelItem>
