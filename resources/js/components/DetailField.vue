@@ -1,7 +1,11 @@
 <template>
     <PanelItem :index="index" :field="field">
         <template v-slot:value>
-            <div class="editor-js" v-html="field.value"></div>
+            <button type="button" @click="showContent = !showContent" class="link-default" tabindex="0">
+                <template v-if="showContent">Hide Content</template>
+                <template v-else>Show Content</template>
+            </button>
+            <div v-if="showContent" class="editor-js" v-html="field.value"></div>
         </template>
     </PanelItem>
 </template>
@@ -10,7 +14,10 @@
 import 'normalize.css/normalize.css'
 
 export default {
-    props: ['index', 'resource', 'resourceName', 'resourceId', 'field']
+    props: ['index', 'resource', 'resourceName', 'resourceId', 'field'],
+    data: () => ({
+        showContent: false
+    })
 }
 </script>
 
